@@ -1,0 +1,49 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url("../img/bglog.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+}
+.container {
+    font-family: 'SUSE', sans-serif !important;
+}
+.card {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.95);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 10px;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+.card-header-custom {
+    background-color: #d16500;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 15px 15px 0 0;
+}
+.btn-primary {
+    background-color: #d16500;
+    border-color: #d16500;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+}
+.btn-primary:hover {
+    background-color: #884200;
+    border-color: #884200;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.footer-link {
+    color: #d16500;
+    transition: color 0.3s;
+}
+.footer-link:hover {
+    text-decoration: underline;
+    color: #c0556a;
+}

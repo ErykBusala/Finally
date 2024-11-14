@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - MUA Makeup</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link href='https://fonts.googleapis.com/css2?family=SUSE&display=swap' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./src/css/register.css">
+</head>
+<body>
+    <div class="container d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+        <div class="row align-items-center w-100">
+            <!-- Register Form Column -->
+            <div class="col-lg-6 col-md-6">
+                <div class="card-header-custom d-md-none">
+                    <div class="text-center">
+                        <h3>Selamat Datang di Azalleart!!</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <form id="registerForm" action="./handler/proses_register" method="POST">
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan password" required>
+                                <div id="passwordError" class="error-message"></div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fullname" class="form-label">Nama Lengkap</label>
+                                <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Masukkan nama lengkap" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="date_of_birth" class="form-label">Tanggal Lahir</label>
+                                <input type="date" class="form-control" id="date_of_birth" name="date_of_birth" required>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary">Daftar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center">
+                        <small>Sudah punya akun? <a href="login" class="footer-link">Login di sini</a></small>
+                    </div>
+                </div>
+            </div>
+              <!-- Image Column -->
+              <div class="col-md-6 d-none d-md-block">
+                <div class="card">
+                    <img src="../src/img/azalleart.jpg" alt="Logo Image" class="img-fluid" style="border-radius: 15px;">
+                    <div class="card-header-custom text-center mt-3">
+                        <h3>Mulai perjalanan kecantikan Anda dengan mendaftar bersama kami!</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

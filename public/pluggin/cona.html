@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <style>
+      
+@import url('https://fonts.googleapis.com/css?family=Mukta');
+body{
+font-family: 'Mukta', sans-serif;
+height:100vh;
+min-height:550px;
+background: url('../images/bg.jpg') no-repeat;
+background-size: cover;
+background-position:center;
+position:relative;
+ overflow-y: hidden;
+}
+a{
+text-decoration:none;
+color:#444444;
+}
+.login-reg-panel{
+ position: relative;
+ top: 50%;
+ transform: translateY(-50%);
+text-align:center;
+ width:70%;
+right:0;left:0;
+ margin:auto;
+ height:400px;
+ background-color: #A8E7E9;
+}
+.white-panel{
+ background-color: rgba(255,255, 255, 1);
+ height:500px;
+ position:absolute;
+ top:-50px;
+ width:50%;
+ right:calc(50% - 50px);
+ transition:.3s ease-in-out;
+ z-index:0;
+ box-shadow: 0 0 15px 9px #00000096;
+}
+.login-reg-panel input[type="radio"]{
+ position:relative;
+ display:none;
+}
+
+.login-reg-panel{
+ color: #4A403A;
+}
+.login-reg-panel #label-login,
+.login-reg-panel #label-register{
+ border:1px solid #9E9E9E;
+ padding:5px 5px;
+ width:150px;
+ display:block;
+ text-align:center;
+ border-radius:10px;
+ cursor:pointer;
+ font-weight: 600;
+ font-size: 18px;
+}
+.login-info-box{
+ width:30%;
+ padding:0 50px;
+ top:20%;
+ left:0;
+ position:absolute;
+ text-align:left;
+}
+.register-info-box{
+ width:30%;
+ padding:0 50px;
+ top:20%;
+ right:0;
+ position:absolute;
+ text-align:left;
+
+}
+.right-log{right:50px !important;}
+
+.login-show,
+.register-show{
+ z-index: 1;
+ display:none;
+ opacity:0;
+ transition:0.3s ease-in-out;
+ color:#242424;
+ text-align:left;
+ padding:50px;
+}
+.show-log-panel{
+ display:block;
+ opacity:0.9;
+}
+.login-show input[type="text"], .login-show input[type="password"]{
+ width: 100%;
+ display: block;
+ margin:20px 0;
+ padding: 15px;
+ border: 1px solid #b5b5b5;
+ outline: none;
+}
+.login-show input[type="button"] {
+ max-width: 150px;
+ width: 100%;
+ background: #444444;
+ color: #f9f9f9;
+ border: none;
+ padding: 10px;
+ text-transform: uppercase;
+ border-radius: 2px;
+ float:right;
+ cursor:pointer;
+}
+.login-show a{
+ display:inline-block;
+ padding:10px 0;
+}
+
+.register-show input[type="text"], .register-show input[type="password"]{
+ width: 100%;
+ display: block;
+ margin:20px 0;
+ padding: 15px;
+ border: 1px solid #b5b5b5;
+ outline: none;
+}
+.register-show input[type="button"] {
+ max-width: 150px;
+ width: 100%;
+ background: #444444;
+ color: #f9f9f9;
+ border: none;
+ padding: 10px;
+ text-transform: uppercase;
+ border-radius: 2px;
+ float:right;
+ cursor:pointer;
+}
+.credit {
+ position:absolute;
+ bottom:10px;
+ left:10px;
+ color: #3B3B25;
+ margin: 0;
+ padding: 0;
+ font-family: Arial,sans-serif;
+ text-transform: uppercase;
+ font-size: 12px;
+ font-weight: bold;
+ letter-spacing: 1px;
+ z-index: 99;
+}
+a{
+text-decoration:none;
+color:#2c7715;
+size: 30px;
+}
+
+
+.mobile-view{
+  display: none;
+}
+
+
+/**responsive**/
+
+@media (max-width:980px){
+    h2{
+        font-size: 60px;
+    }
+
+    body{
+        font-family: 'Mukta', sans-serif;
+        align-items: center;
+        display: flex;
+        background: url('../images/bg.jpg') no-repeat;
+        background-size: cover;
+        background-position:center;
+        position:relative;
+         overflow-y: hidden;
+        
+        }
+ 
+
+
+.login-reg-panel{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+   text-align:center;
+    width:70%;
+   right:0;left:0;
+    margin:auto;
+    height:400px;
+    display: none;
+    background-color: #ffc14f;
+   }
+
+  
+   .mobile-view{
+       
+    display: flex;
+     top: 50px;
+     height:90%;
+     width: 90%;
+    margin-left:5%;
+    margin-right:5%;
+    position: absolute;
+    z-index:0;
+    box-shadow: 0 0 15px 9px #00000096;
+    justify-self: center;
+    align-self: center;
+                               
+   }
+
+
+
+   .login-show-2 input[type="text"], .login-show-2 input[type="password"]{
+    width: 80%;
+    display: block;
+    margin:20px 0;
+    padding: 15px;
+    border: 1px solid #b5b5b5;
+    outline: none;
+    font-size: 45px;
+   }
+
+   .login-show-2 {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(43, 11, 11);
+   }
+
+   .login-show-2 input[type="button"] {
+    width: 80%;
+    display: block;
+    margin:20px 0;
+    padding: 15px;
+    background: #ff7843;
+    background: #ffdbce;
+ color: #360404;
+    border: 1px solid #b5b5b5;
+    outline: none;
+    font-size: 45px;
+   }
+
+    .bottom {
+display: flex;
+justify-content: center;
+align-items: center;
+  width: 100%;
+    }
+
+  .text {
+      font-size: 40px;
+      width:500px;
+      float:left;
+      display: block;
+  }
+
+  .reg a{
+      font-size: 40px;
+      float: right;
+      color: blue;
+      width: 300px;
+  }
+  .reg a{
+   
+    color: blue;
+  
+  }
+
+  .forget {
+    font-size: 40px;
+    align-self: center;
+    display: block;
+    width: 600px;
+  }
+   
+
+
+
+
+
+
+
+  .register-show-2 input[type="text"], .register-show-2 input[type="password"]{
+    width: 80%;
+    display: block;
+    margin:20px 0;
+    padding: 15px;
+    border: 1px solid #b5b5b5;
+    outline: none;
+    font-size: 45px;
+   }
+
+   .register-show-2 {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255, 255, 1);
+   }
+
+   .register-show-2 input[type="button"] {
+    width: 80%;
+    display: block;
+    margin:20px 0;
+    padding: 15px;
+    background: #444444;
+ color: #f9f9f9;
+    border: 1px solid #b5b5b5;
+    outline: none;
+    font-size: 45px;
+   }
+
+
+
+   .log {
+    font-size: 40px;
+    float: right;
+    
+    width: 300px;
+   }
+
+   .log a{
+    
+    color: blue;
+   
+   }
+  
+  
+
+
+   
+
+
+}
+    </style>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  </head>
+  <body> 
+    <div class="login-reg-panel">
+    		<div class="login-info-box">
+    			<h2>Have an account?</h2>
+    			<p>Login to your account</p>
+    			<label id="label-register" for="log-reg-show">Login</label>
+    			<input type="radio" name="active-log-panel" id="log-reg-show"  checked="checked">
+    		</div>
+
+    		<div class="register-info-box">
+    			<h2>Don't have an account?</h2>
+    			<p>Register Yourself </p>
+    			<label id="label-login" for="log-login-show">Register</label>
+    			<input type="radio" name="active-log-panel" id="log-login-show">
+    		</div>
+        
+    		<div class="white-panel">
+    			<div class="login-show">
+    				<h2>LOGIN</h2>
+    				<input type="text" placeholder="Email">
+    				<input type="password" placeholder="Password">
+    				<input type="button" value="Login">
+    				<a href="">Forgot password?</a>
+    			</div>
+    			<div class="register-show">
+    				<h2>REGISTER</h2>
+    				<input type="text" placeholder="Email">
+    				<input type="password" placeholder="Password">
+    				<input type="password" placeholder="Confirm Password">
+    				<input type="button" value="Register">
+    			</div>
+    		</div>
+		
+    	</div>
+
+	 <center>
+		<div class="mobile-view">
+			
+			<div class="login-show-2">
+				<br><br><br><br>
+				<center><h2>LOGIN</h2>
+					<br><br><br>
+				<input type="text" placeholder="Email">
+				<br><br>
+				<input type="password" placeholder="Password">
+				<br><br>
+				<input type="button" value="Login"><br>
+				<a href=""><div class="forget">Forgot password?</div></a><br> <br>
+			<div class="bottom">	<div class="text">Don't have an account ? </div><div class="reg"><a href="regPageMob.html">register here</a> </div> </div>
+			</div>
+
+
+			
+			</div>
+
+
+		</div>
+	 </center>
+		
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script>
+        
+    $(document).ready(function(){
+      $('.login-info-box').fadeOut();
+      $('.login-show').addClass('show-log-panel');
+  });
+  
+  
+  $('.login-reg-panel input[type="radio"]').on('change', function() {
+      if($('#log-login-show').is(':checked')) {
+          $('.register-info-box').fadeOut();
+          $('.login-info-box').fadeIn();
+  
+          $('.white-panel').addClass('right-log');
+          $('.register-show').addClass('show-log-panel');
+          $('.login-show').removeClass('show-log-panel');
+  
+      }
+      else if($('#log-reg-show').is(':checked')) {
+          $('.register-info-box').fadeIn();
+          $('.login-info-box').fadeOut();
+  
+          $('.white-panel').removeClass('right-log');
+  
+          $('.login-show').addClass('show-log-panel');
+          $('.register-show').removeClass('show-log-panel');
+      }
+  });
+      </script>
+  </body>
+</html>
